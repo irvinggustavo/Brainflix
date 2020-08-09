@@ -1,0 +1,23 @@
+@import '../../../partials/_variables';
+
+.sideImg {
+    width: 120px;
+    height: 70px;
+}
+
+.details_container{
+    width: 156px;
+    height: 70px;
+}
+
+.video__container {
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.mainContainer { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

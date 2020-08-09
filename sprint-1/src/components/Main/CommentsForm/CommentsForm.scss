@@ -1,0 +1,27 @@
+@import '../../../partials/_variables.scss';
+@import '../../../partials/_mixin.scss';
+
+
+.form__label{
+    margin-top: 12px;
+    @include text (14px, 22px);
+}
+
+.comments_input {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 16px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form__input {
+    height: 96px;
+    width: 222px;
+    margin-bottom: 16px;
+}
+

@@ -1,0 +1,35 @@
+@import '../../../partials/_variables';
+@import '../../../partials/_mixin';
+
+.MainVideo__details{
+    margin: 0px 16px 24px;
+}
+
+.heading__inner {
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.iconDetail {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.heading {
+    @include text (24px, 32px);
+    margin: 0;
+}
+.subHeading {
+    @include text (14px, 22px)
+}
+
+.HeroDescrip {
+    @include text (13px, 18px)
+}
+.HeroDescrip--mod {
+    @include text (14px, 22px);
+    font-weight: bold;
+    
+}

@@ -3,6 +3,7 @@ import LogoImg from '../../assets/Logo/Logo-brainflix.svg';
 import upload from '../../assets/Icons/SVG/Icon-upload.svg';
 import './Header.scss'
 
+
 class Header extends React.Component{
     
     render(){
@@ -40,7 +41,9 @@ class Form extends React.Component{
                 <div className= 'header--inner'>
                     <Btn 
                         url = {upload}
-                        alt = 'Plus sign' />
+                        alt = 'Plus sign' 
+                        text = 'UPLOAD'
+                        />
                     <Avatar/>
                 </div>
                 
@@ -49,24 +52,26 @@ class Form extends React.Component{
     }
 }
 
-class Btn extends React.Component{
+export class Btn extends React.Component{
     render(){
         return(
-            <button className="header__btn"> 
+            <div className="header__btn"> 
                 <img 
                     src = {this.props.url}
                     alt = {this.props.description}
-                    /> UPLOAD
-            </button>
+                    type = 'submit'
+                    /> 
+                    <p>{this.props.text}</p>
+            </div>
         )
     }
 }
 
 
-class Avatar extends React.Component{
+export class Avatar extends React.Component{
     render(){
         return(
-            <div className="avatar"></div>
+           <div className="avatar"></div>
         )  
     }
 }

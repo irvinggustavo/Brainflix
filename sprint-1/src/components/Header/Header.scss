@@ -7,7 +7,7 @@
     height: 169px;
     margin-right: 16px;
     margin-left: 16px;
-    position: fixed;
+    // position: fixed;
 }
 
 .header__logo{
@@ -24,6 +24,9 @@
 }
 
 .header__btn{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
     width: 222px;
     margin-right: 16px;
     height: 48px;
