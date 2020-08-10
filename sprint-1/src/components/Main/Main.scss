@@ -1,20 +1,19 @@
-@import '../../partials/_mixin.scss';
-@import '../../partials/_variables';
+@import "../../partials/_mixin.scss";
+@import "../../partials/_variables";
 
-.deskFLex{
-    @include desk{
-        display: flex;
-        flex-direction: row;
-    }
+.deskFLex {
+  @include desk {
+    display: flex;
+    flex-direction: row;
+  }
 
-    @media screen and (min-width:59.375rem) {
-        display: flex;
-        flex-direction: row;
-    }
+  @media screen and (min-width: 59.375rem) {
+    display: flex;
+    flex-direction: row;
+  }
 }
-.inner{
-    @media screen and (min-width:59.375rem) {
-        width: 44.5rem;
-    }
-    
+.inner {
+  @media screen and (min-width: 59.375rem) {
+    width: 44.5rem;
+  }
 }

@@ -43,6 +43,10 @@
     margin: 3rem 1rem 0;
     border-top: 0.0625rem solid $mercury;
     padding-top: 1.5rem;
+
+    @media screen and(min-width: 950px) {
+        margin-top: 0px
+    }
 }
 
 .comment__p{

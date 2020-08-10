@@ -1,88 +1,69 @@
-import React from 'react';
-import LogoImg from '../../assets/Logo/Logo-brainflix.svg';
-import upload from '../../assets/Icons/SVG/Icon-upload.svg';
-import './Header.scss'
-import searchImg from '../../assets/Icons/SVG/Icon-search.svg'
+import React from "react";
+import LogoImg from "../../assets/Logo/Logo-brainflix.svg";
+import upload from "../../assets/Icons/SVG/Icon-upload.svg";
+import "./Header.scss";
+import searchImg from "../../assets/Icons/SVG/Icon-search.svg";
 
-class Header extends React.Component{
-    
-    render(){
-        return (
-            <header className = 'header'>
-            <Logo 
-                url = {LogoImg}
-                description = 'logo'
-                />
-            <Form/>
-            </header>
-        ) 
-    }
+class Header extends React.Component {
+  render() {
+    return (
+      <header className="header">
+        <Logo url={LogoImg} description="logo" />
+        <Form />
+      </header>
+    );
+  }
 }
 
-class Logo extends React.Component{
-    
-    render(){
-        return(
-            <div className="header__logo">
-                <img 
-                    src = {this.props.url}
-                    alt= {this.props.description}
-                    />
-            </div>
-        )
-    }
+class Logo extends React.Component {
+  render() {
+    return (
+      <div className="header__logo">
+        <img src={this.props.url} alt={this.props.description} />
+      </div>
+    );
+  }
 }
 
-class Form extends React.Component{
-    render(){
-        return(
-            <form className = "header__form">
-                <div className = 'search__box' >
-                    <div className = 'search__icon'>
-                        <img src= {searchImg} alt = 'search icon'/>
-                    </div>
-                    <input type="search" className="header__search" placeholder = 'Search'/> 
-                </div>
-                
-                <div className= 'header--inner'>
-                    <Btn 
-                        url = {upload}
-                        alt = 'Plus sign' 
-                        text = 'UPLOAD'
-                        />
-                    <Avatar/>
-                </div>
-                
-            </form>
-        )
-    }
+class Form extends React.Component {
+  render() {
+    return (
+      <form className="header__form">
+        <div className="search__box">
+          <div className="search__icon">
+            <img src={searchImg} alt="search icon" />
+          </div>
+          <input
+            type="search"
+            className="header__search"
+            placeholder="Search"
+          />
+        </div>
+
+        <div className="header--inner">
+          <Btn url={upload} alt="Plus sign" text="UPLOAD" />
+          <Avatar />
+        </div>
+      </form>
+    );
+  }
 }
 
-export class Btn extends React.Component{
-    render(){
-        return(
-            <div className="header__btn"> 
-                <img 
-                    src = {this.props.url}
-                    alt = {this.props.description}
-                    type = 'submit'
-                    /> 
-                    <p>{this.props.text}</p>
-            </div>
-        )
-    }
+export class Btn extends React.Component {
+  render() {
+    return (
+      <div className="header__btn">
+        <img src={this.props.url} alt={this.props.description} type="submit" />
+        <p>{this.props.text}</p>
+      </div>
+    );
+  }
 }
 
-
-export class Avatar extends React.Component{
-    render(){
-        return(
-           <div className="avatar"></div>
-        )  
-    }
+export class Avatar extends React.Component {
+  render() {
+    return <div className="avatar"></div>;
+  }
 }
 
-
-
-
-export default (Header)
+export default Header;
