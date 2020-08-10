@@ -5,7 +5,21 @@
 
 @mixin fakeAvatar {
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 2.25rem;
+    height: 2.25rem;
     background-color: gray;
 }
+
+// Media query 
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-bk-point) {
+      @content;
+    }
+  }
+
+  @mixin desk {
+    @media screen and (min-width: $desk-bk-point) {
+      @content;
+    }
+  }

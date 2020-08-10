@@ -1,18 +1,29 @@
 @import '../../../partials/_variables';
+@import '../../../partials/_mixin.scss';
 
 .sideImg {
     width: 120px;
     height: 70px;
+    border-radius: 4px;
 }
 
 .details_container{
     width: 156px;
     height: 70px;
+    @include text (14px, 22px);
+    display: flex;
+    flex-direction: column;
+    font-family: 'AvenirRegular';
+    
+        & p {
+            margin: 0;
+        }
 }
 
 .video__container {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 24px;
    
 }
 
@@ -20,4 +31,46 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    @include tablet{
+        align-items: baseline;
+        margin-left: 24px
+    }
+}
+.details__title{
+    @include text (13px, 18px);
+    font-weight: bold;
+    padding-left: 16px;
+
+    @include tablet{
+        @include text (14px, 22px);
+        width: 168px;
+
+    }
+}
+
+.details__channel {
+    @include text (13px, 18px);
+    padding-top: 16px;
+    padding-left: 16px;
+
+    @include tablet{
+        @include text (14px, 20px);
+         width: 224px;
+         padding-top: 8px;
+    }
+}
+
+.sideVIdeo__heading{
+    margin: 40px 16px;
+    color: $silver;
+    @include text(14px, 22px)
+}
+.nextVideo{
+    @include tablet{
+        margin-right: 24px;
+        margin-left: 24px;
+        display: flex;
+        flex-direction: column;
+    }
 }

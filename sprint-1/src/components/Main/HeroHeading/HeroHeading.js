@@ -23,15 +23,18 @@ class HeroHeading extends React.Component{
     render(){
         return(
             <section className = 'MainVideo__details'>
-                <HeadingDeatils 
-                    title= {this.state.mainVideo.title}
+            <h1 className = 'heading'>{this.state.mainVideo.title}</h1>
+               <div className = 'wtf'>
+               <HeadingDeatils 
+                    // title= {this.state.mainVideo.title}
                     channel= {this.state.mainVideo.channel}
                     date = {this.state.mainVideo.date}
                     />
-                    <div className= 'heading__inner'>
+                    <div className= 'heading__inner divider'>
                         <Views views = {this.state.mainVideo.views}/> 
                         <Likes likes = {this.state.mainVideo.likes}/>
                     </div>
+                </div>   
                 <VideoDescription 
                     description = {this.state.mainVideo.description}
                     comments = {this.state.mainVideo.comments}
@@ -47,10 +50,10 @@ class HeadingDeatils extends React.Component{
     render(){
         return(
             <>
-                <h1 className = 'heading'>{this.props.title}</h1>
+                {/* <h1 className = 'heading'>{this.props.title}</h1> */}
                 <div className = 'heading__inner subHeading'>
-                    <h3>{this.props.channel}</h3>
-                    <h3>{this.props.date}</h3>
+                    <h3 className= 'channel'>{this.props.channel}</h3>
+                    <h3 className= 'silver'>{this.props.date}</h3>
                 </div>    
             </>
                 
@@ -62,7 +65,7 @@ class HeadingDeatils extends React.Component{
 class Views extends React.Component{
     render(){
         return(
-            <div className = 'iconDetail'>
+            <div className = 'iconDetail iconDetail--mod'>
                 <img 
                     src = {viewIcon }
                     alt = 'Views icon'
@@ -76,7 +79,7 @@ class Views extends React.Component{
 class ViewCount extends React.Component{
     render(){
         return(
-            <h3 className= 'subHeading'>{this.props.views}</h3>
+            <h3 className= 'subHeading silver'>{this.props.views}</h3>
         )
     }
 }
@@ -99,7 +102,7 @@ class Likes extends React.Component{
 class LikesCount extends React.Component{
     render(){
         return(
-            <h3 className= 'subHeading'>{this.props.likes}</h3>
+            <h3 className= 'subHeading silver'>{this.props.likes}</h3>
         )
     }
 }

@@ -26,7 +26,7 @@ class Comments extends React.Component{
     render(){
             
         return(
-            <section>
+            <section className = 'comments__main'>
                 {this.state.comments.map( item =>{
                 return (
                     <Comment
@@ -49,7 +49,7 @@ class Comment extends React.Component{
                 <div className = 'fakeAvatar'></div>
                 <div className = 'comment__box'>
                     <div className= 'comm__subheading'>
-                        <p class = 'bold'> {this.props.user}</p>
+                        <p className = 'bold'> {this.props.user}</p>
                         <p className ='date'> {this.props.date}</p>
                     </div>
                     <div>

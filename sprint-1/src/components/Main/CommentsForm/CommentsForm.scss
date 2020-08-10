@@ -3,25 +3,81 @@
 
 
 .form__label{
-    margin-top: 12px;
-    @include text (14px, 22px);
+    margin-top: 0.75rem;
+    @include text (0.875rem, 1.375rem);
+    color: $silver;
+    margin-bottom: 0.5rem;
+
+        @include tablet{
+            align-self: baseline;
+        }
 }
 
 .comments_input {
     display: flex;
     justify-content: space-between;
-    margin-left: 16px;
+    margin-left: 1rem;
+
+    @include tablet {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        align-items: center;
+        margin-right: 1.5rem;
+        margin-left:  1.5rem;
+    }
 }
 
 .form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: AvenirRegular;
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (min-width:25rem) and (max-width:47.9375rem){
+            justify-content:  center;
+        }
 }
 
 .form__input {
-    height: 96px;
-    width: 222px;
-    margin-bottom: 16px;
+    height: 6rem;
+    width: 13.875rem;
+    margin-bottom: 1rem;
+     
+    &:focus{
+        outline-color: #0095FF;    
+    }
+    @media screen and (min-width:25rem) and (max-width:47.9375rem){
+        width: 100%;
+        height: 3rem;
+        margin-right: 1rem;
+    }
+
+    @include tablet{
+        height: 3rem;
+        align-self: flex-end;
+        width: 27.5rem;
+    }
+
+   
+}
+.form__flex{
+
+     @media screen and (min-width:25rem) and (max-width:47.9375rem){
+        display: flex;
+        flex-direction: row;
+     }
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+    }  
 }
 
+.btn--mod{
+    width: 10rem;
+}

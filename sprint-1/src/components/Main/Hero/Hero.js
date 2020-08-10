@@ -12,21 +12,24 @@ class Hero extends React.Component{
     render () {
         return (
             <section className = "hero">
+            <div className= 'video__bg'>
                  <video className = "hero__video" poster= {poster} src ={videoTest} type="video/mp4" />
+            </div>
+               
                  <div className = 'video__controls'>
 
                     <div className="controls__icon"> 
-                        <img src = {play} />
+                        <img src = {play} alt = 'play' />
                     </div>
                     <div className="video__controls--scrub">
                         {/* <img src = {scrubberLoad} /> */}
                     </div>
                     <div className= "hero__videoTools">
                         <div className="controls__icon">
-                            <img src = {volumen} />
+                            <img src = {volumen}  alt ='volumen'/>
                         </div>
                         <div className="controls__icon">
-                            <img src = {fullScreen} />
+                            <img src = {fullScreen}  alt = 'expand'/>
                         </div>
                     </div>
                     

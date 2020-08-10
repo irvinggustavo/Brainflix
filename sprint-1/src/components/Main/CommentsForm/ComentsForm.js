@@ -10,10 +10,13 @@ class CommentsForm extends React.Component{
                 {/* <div className= "fake_avatar"> </div> */}
                 <Avatar/>
                 <div>
-                    <form className ='form'>
-                        <label htmlFor='comment' className = 'form__label'> JOIN THE CONVERSATION</label>
-                        <input id = 'comment' name ='comment' type = 'text' className = 'form__input'></input>
-                        <Btn text= 'COMMENT'/>
+                    <form className ='form' >
+                    <label htmlFor='comment' className = 'form__label'> JOIN THE CONVERSATION</label>
+                        <div className ='form__flex'>
+                            
+                            <input id = 'comment' name ='comment' type = 'text' className = 'form__input'></input>
+                            <Btn text= 'COMMENT'/>
+                        </div>
                     </form>
                 </div>
                

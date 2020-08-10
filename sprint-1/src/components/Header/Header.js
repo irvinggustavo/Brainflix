@@ -2,7 +2,7 @@ import React from 'react';
 import LogoImg from '../../assets/Logo/Logo-brainflix.svg';
 import upload from '../../assets/Icons/SVG/Icon-upload.svg';
 import './Header.scss'
-
+import searchImg from '../../assets/Icons/SVG/Icon-search.svg'
 
 class Header extends React.Component{
     
@@ -37,7 +37,13 @@ class Form extends React.Component{
     render(){
         return(
             <form className = "header__form">
-                <input type="search" className="header__search" placeholder = 'Search'/> 
+                <div className = 'search__box' >
+                    <div className = 'search__icon'>
+                        <img src= {searchImg} alt = 'search icon'/>
+                    </div>
+                    <input type="search" className="header__search" placeholder = 'Search'/> 
+                </div>
+                
                 <div className= 'header--inner'>
                     <Btn 
                         url = {upload}

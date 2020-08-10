@@ -4,6 +4,7 @@ import HeroHeading from './HeroHeading/HeroHeading'
 import CommentsForm from './CommentsForm/ComentsForm'
 import Comments from './Comments/Comments.js';
 import NextVideo from './NextVideo/NextVideo'
+import './Main.scss'
 
 class Main extends React.Component{
     render(){
@@ -11,10 +12,15 @@ class Main extends React.Component{
             <main>
                
                 <Hero/>
-                <HeroHeading/>
-                <CommentsForm/>
-                <Comments/>
-                <NextVideo/>
+                <div className ='deskFLex'>
+                    <div className = ' inner'>
+                        <HeroHeading/>
+                        <CommentsForm/>
+                        <Comments/>
+                    </div>
+                    <NextVideo/>
+                </div>
+                
            
             </main>
             

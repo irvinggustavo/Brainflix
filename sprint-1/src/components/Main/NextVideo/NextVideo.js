@@ -28,14 +28,14 @@ class NextVideo extends React.Component{
     render(){
     
         return(
-            <section>
-                <h3>NEXT VIDEO</h3>
+            <section className='nextVideo'>
+                <h3 className= 'sideVIdeo__heading'>NEXT VIDEO</h3>
                 <div className = 'mainContainer'>
                     {this.state.sideVideos.map( item =>{
                         return (
                         <>
                         <div className = 'video__container'>
-                            <div>
+                            <div >
                                 <img
                                     key= {uuid()}
                                     src = {item.src}
@@ -44,8 +44,8 @@ class NextVideo extends React.Component{
                             </div>
                             
                             <div className = ' details_container'>
-                                <p>{item.title}</p>
-                                <p>{item.channel}</p>
+                                <p className ='details__title'> {item.title}</p>
+                                <p className =' details__channel'> {item.channel}</p>
                             </div>
                         </div>
                             
