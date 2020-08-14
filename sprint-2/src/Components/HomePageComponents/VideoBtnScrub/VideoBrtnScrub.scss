@@ -1,0 +1,16 @@
+@import '../../../Global/_variables.scss';
+@import '../../../Global/_mixin.scss';
+
+.VideoBtnScrub {
+    height: 32px;
+    width: 48.75%;
+    background-color: $nav-bg-fill;
+  
+    @include tablet {
+      width: 67.57%;
+    }
+  
+    @include desk {
+      width: 46.9375rem;
+    }
+  }

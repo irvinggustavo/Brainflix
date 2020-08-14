@@ -1,0 +1,25 @@
+@mixin text($size, $height) {
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin fakeAvatar {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: gray;
+}
+
+// Media query 
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-bk-point) {
+      @content;
+    }
+  }
+
+  @mixin desk {
+    @media screen and (min-width: $desk-bk-point) {
+      @content;
+    }
+  }

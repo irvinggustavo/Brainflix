@@ -1,0 +1,13 @@
+@import '../../../Global/_mixin.scss';
+@import '../../../Global/_variables.scss';
+
+.comments__main{
+    @include tablet{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+
+        @include desk {
+            margin-right: 0;
+        }
+    }
+}
