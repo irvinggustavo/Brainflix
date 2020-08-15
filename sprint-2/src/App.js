@@ -11,8 +11,8 @@ function App() {
     <Router>
       <Header/>
       <Switch>
-        <Route  exact path="/" component={Home} />
-        <Route path="/UploadVideo" component={UploadVideo} />
+        <Route  exact path= '/' component={Home} />
+        <Route path= '/UploadVideo' component={UploadVideo} />
       </Switch>
     </Router>
     </div>

@@ -7,9 +7,10 @@ import VideoPlayerBar from '../VideoPlayerBar/VideoPlayerBar';
 
 class VideoPlayer extends React.Component{
     render(){
+        console.log(this.props)
         return(
             <section className = 'videoPlayer'>
-                <MainVideo/>
+                <MainVideo details = {this.props.details}/>
                 <VideoPlayerBar/>
             </section>
         )
