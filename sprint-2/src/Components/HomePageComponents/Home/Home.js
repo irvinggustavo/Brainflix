@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import VideoPlayer from "../VidePlayer/VideoPlayer.js";
 import CommentsForm from "../CommentsForm/CommentsForm.js";
 import Comments from "../Comments/Comments.js";
@@ -37,7 +38,7 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.props.match.params);
     return (
       <main>
         <VideoPlayer details={this.state.mainVideo} />
@@ -47,7 +48,7 @@ class Home extends React.Component {
             <CommentsForm />
             <Comments details={this.state.mainVideo} />
           </div>
-          <NextVideo nextVideo={this.state.sideVideos} />
+            <NextVideo nextVideo={this.state.sideVideos} details={this.state.mainVideo} />
         </div>
       </main>
     );
