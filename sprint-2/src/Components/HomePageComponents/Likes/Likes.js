@@ -16,7 +16,7 @@ import './Likes.scss';
   
   class LikesCount extends React.Component {
     render() {
-      return <h3 className="subHeading silver">{this.props.likes}</h3>;
+      return <h3 className="subHeading silver">{this.props.likes } </h3>;
     }
   }
   

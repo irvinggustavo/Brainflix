@@ -15,8 +15,7 @@ const url = "https://project-2-api.herokuapp.com/";
 class Home extends React.Component {
   state = {
     sideVideos: [],
-
-    mainVideo: null,
+    mainVideo: ''
   };
 
   componentDidMount() {
@@ -26,13 +25,13 @@ class Home extends React.Component {
 
       // console.log(mainV)
       axios.get(`${url}videos/${key}`).then((res) => {
-        console.log(res);
-
+        console.log(res.data[0]);
+          
+    
         this.setState({
           mainVideo: mainV,
           sideVideos: res.data,
         });
-        //  () =>{console.log(this.state.mainVideo)}
       });
     });
   }
@@ -44,9 +43,9 @@ class Home extends React.Component {
         <VideoPlayer details={this.state.mainVideo} />
         <div className="deskFLex">
           <div className=" inner">
-            <MainVideoDetails details={this.state.mainVideo}  />
+            <MainVideoDetails details={this.state.mainVideo} />
             <CommentsForm />
-            <Comments details={this.state.mainVideo}  />
+            <Comments details={this.state.mainVideo} />
           </div>
           <NextVideo nextVideo={this.state.sideVideos} />
         </div>

@@ -4,11 +4,10 @@ import './VideoDescription.scss'
 
 class VideoDescription extends React.Component {
     render() {
-      console.log(this.props)
       return (
         <div>
-          {/* <p className="HeroDescrip"> {this.props.details.description} </p>
-          <p className="HeroDescrip--mod"> {this.props.details ? this.props.details.comments : ''} comments</p> */}
+         <p className="HeroDescrip" > {this.props.description}</p> 
+          <p className="HeroDescrip--mod"> {this.props.comments.length} comments</p> 
         </div>
       );
     }
