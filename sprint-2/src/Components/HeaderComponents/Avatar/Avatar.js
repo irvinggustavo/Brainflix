@@ -1,12 +1,8 @@
-import React from 'react';
-import './Avatar.scss';
+import React from "react";
+import "./Avatar.scss";
 
-const Avatar = (props) =>{
-    return(
-        
-         <div className= {props.className}></div>
-    )
-    
-}
+const Avatar = (props) => {
+  return <div className={props.className}></div>;
+};
 
-export default (Avatar)
+export default Avatar;

@@ -1,12 +1,11 @@
-@import '../../../Global/mixin.scss';
-@import '../../../Global/variables.scss';
-
+@import "../../../Global/mixin.scss";
+@import "../../../Global/variables.scss";
 
 .form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-@include tablet {
+  @include tablet {
     flex-direction: row;
     margin-right: 1rem;
   }

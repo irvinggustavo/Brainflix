@@ -1,12 +1,12 @@
 import React from 'react';
-// import './Thumbnail';
+import './thumbnail.scss'
 
 class Thumbnail extends React.Component{
     render(){
         return (
             <div>
-                <p>VIDEO THUMBNAIL</p>
-                <img src = {this.props.previesVideo} alt = {this.props.previesVideo}/>
+                <p className = " Upload__heading"> VIDEO THUMBNAIL </p>
+                <img  className= "Thumbnail" src = {this.props.previesVideo} alt = {this.props.previesVideo}/>
             </div>
         )
     }

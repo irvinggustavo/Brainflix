@@ -1,0 +1,54 @@
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
+
+.Upload__form {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.0625rem solid $mercury;
+  width: 100vw;
+
+  @include desk {
+    margin-left: 1.5rem;
+  }
+}
+
+.form__label {
+  @include text(0.875rem, 1.375rem);
+  color: $silver;
+  margin-top: 1.5rem;
+}
+
+.form__label--mod {
+  margin-top: 2rem;
+
+  @include tablet {
+    margin-top: 2.5rem;
+  }
+}
+
+.video__description {
+  height: 8.9375rem;
+  resize: none;
+  border: 0.0625rem solid $mercury;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include tablet {
+    margin-bottom: 2.5rem;
+  }
+
+  @include desk {
+    height: 5.875rem;
+  }
+}
+
+.vieo__title {
+  height: 3rem;
+  border: 0.0625rem solid $mercury;
+
+  &:focus {
+    outline: none;
+  }
+}

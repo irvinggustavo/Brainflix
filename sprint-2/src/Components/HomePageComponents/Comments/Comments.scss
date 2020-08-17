@@ -1,85 +1,83 @@
-@import '../../../Global/_mixin.scss';
-@import '../../../Global/_variables.scss';
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
 
-.comments__main{
-    @include tablet{
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+.comments__main {
+  @include tablet {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 
-        @include desk {
-            margin-right: 0;
-        }
+    @include desk {
+      margin-right: 0;
     }
+  }
 }
 .fakeAvatar {
-    @include fakeAvatar;
+  @include fakeAvatar;
 }
 
 .comment__box {
-    width: 14.625rem;
-    font-family: AvenirRegular;
+  width: 14.625rem;
+  font-family: AvenirRegular;
 
-    @include tablet{
-        width: 39rem; 
-    }
+  @include tablet {
+    width: 39rem;
+  }
 
-    @include desk {
-        margin-left: 1.5rem;
-    }
+  @include desk {
+    margin-left: 1.5rem;
+  }
 
-    @media screen and (min-width: 21.875rem) and (max-width: 47.9375rem){
-        width: 75%;
-    }
+  @media screen and (min-width: 21.875rem) and (max-width: 47.9375rem) {
+    width: 75%;
+  }
 }
 
-.comm__subheading{
-    width: 14.625rem;
-    display: flex;
-    justify-content: space-between;
-    @include text(0.875rem, 1.375rem);
+.comm__subheading {
+  width: 14.625rem;
+  display: flex;
+  justify-content: space-between;
+  @include text(0.875rem, 1.375rem);
 
-    @include tablet {
-        @include text(1rem, 1.5rem);
-        justify-content: flex-start;
-        align-items: baseline;
-    }
-
+  @include tablet {
+    @include text(1rem, 1.5rem);
+    justify-content: flex-start;
+    align-items: baseline;
+  }
 }
 
 .comment__container {
-    display: flex;
-    justify-content: space-between;
-    margin: 3rem 1rem 0;
-    border-top: 0.0625rem solid $mercury;
-    padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 1rem 0;
+  border-top: 0.0625rem solid $mercury;
+  padding-top: 1.5rem;
 
-    @media screen and(min-width: 950px) {
-        margin-top: 0px
-    }
+  @media screen and(min-width: 950px) {
+    margin-top: 0px;
+  }
 }
 
-.comment__p{
+.comment__p {
+  @include text(0.875rem, 1.375rem);
+  font-family: "AvenirRegular";
+
+  @include tablet {
     @include text(0.875rem, 1.375rem);
-    font-family: 'AvenirRegular';
-
-    @include tablet {
-        @include text(0.875rem, 1.375rem);
-    }
+  }
 }
-.bold{
-    font-weight: bold;
-     
-    @include tablet {
-        @include text(1rem, 1.5rem);
-        margin-right: 1rem;
-    }
+.bold {
+  font-weight: bold;
+
+  @include tablet {
+    @include text(1rem, 1.5rem);
+    margin-right: 1rem;
+  }
 }
 
 .date {
-    color: $silver;
+  color: $silver;
 }
 
-.comments__main > :last-child{
-    border-bottom: 0.0625rem solid $mercury;
-
+.comments__main > :last-child {
+  border-bottom: 0.0625rem solid $mercury;
 }

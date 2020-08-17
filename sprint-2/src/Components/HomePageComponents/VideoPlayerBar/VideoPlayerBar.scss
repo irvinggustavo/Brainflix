@@ -1,26 +1,26 @@
- @import '../../../Global/_mixin.scss';
- @import '../../../Global/_variables.scss';
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
 
- .videoPlayerBar {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-2.125rem);
-  
-    @include tablet {
-      justify-content: space-around;
-    }
-    @media screen and (min-width: 60.125rem) and (max-width: 75rem) {
-      width: 60%;
-    }
-  }
+.videoPlayerBar {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-2.125rem);
 
-  .VideoPlayerBar--inner {
-      display: flex;
-      width: 4.875rem;
-      height: 2rem;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      background-color: $nav-bg-fill;
+  @include tablet {
+    justify-content: space-around;
   }
+  @media screen and (min-width: 60.125rem) and (max-width: 75rem) {
+    width: 60%;
+  }
+}
+
+.VideoPlayerBar--inner {
+  display: flex;
+  width: 4.875rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $nav-bg-fill;
+}

@@ -1,5 +1,62 @@
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
 
-.UploadVideo{
+.UploadVideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Upload__head {
+  @include text(1.5rem, 2rem);
+  border-top: 0.0625rem solid $mercury;
+
+  @include tablet {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    border-top: 0.0625rem solid $mercury;
+    border-bottom: 0.0625rem solid $mercury;
+    margin-top: 0.625rem;
+  }
+}
+
+article {
+  font-family: AvenirRegular;
+}
+
+.CTA__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  @include tablet {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    margin-top: 2.5rem;
+  }
+}
+.CTA--cancel {
+  color: #0095ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Btn--tablet {
+  @include tablet {
+    width: 10rem;
+    margin-left: 3rem;
+  }
+}
+
+.UploadVideo__conatiner {
+  @include desk {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
 }

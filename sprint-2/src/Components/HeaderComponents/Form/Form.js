@@ -1,19 +1,17 @@
-import React from 'react';
-import './Form.scss'
+import React from "react";
+import "./Form.scss";
 
 // components
-import SearchBar from '../SearchBar/SearchBar'
+import SearchBar from "../SearchBar/SearchBar";
 
-
-class Form extends React.Component{
-    render(){
-        return(
-            <form className= 'form'>
-                <SearchBar placeholder = 'SEARCH'/>
-            </form>
-        )
-    }
-    
+class Form extends React.Component {
+  render() {
+    return (
+      <form className="form">
+        <SearchBar placeholder="SEARCH" />
+      </form>
+    );
+  }
 }
 
-export default (Form)
+export default Form;

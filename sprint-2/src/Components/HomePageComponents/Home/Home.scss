@@ -1,20 +1,23 @@
-@import '../../../Global/_mixin.scss';
-@import '../../../Global/_variables.scss';
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
 
 .deskFLex {
-    @include desk {
-      display: flex;
-      flex-direction: row;
-    }
-  
-    @media screen and (min-width: 59.375rem) {
-      display: flex;
-      flex-direction: row;
-    }
+  @include desk {
+    display: flex;
+    flex-direction: row;
   }
-  .inner {
-    @media screen and (min-width: 59.375rem) {
-      width: 44.5rem;
-    }
+
+  @media screen and (min-width: 59.375rem) {
+    display: flex;
+    flex-direction: row;
   }
-  
+}
+.inner {
+  @media screen and (min-width: 59.375rem) {
+    width: 44.5rem;
+  }
+}
+
+main {
+  font-family: AvenirRegular;
+}
