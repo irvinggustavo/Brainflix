@@ -1,0 +1,17 @@
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
+
+.Thumbnail {
+  width: 18rem;
+  height: 9.5625rem;
+
+  @include tablet {
+    width: 21.5rem;
+    height: 11.4375rem;
+  }
+}
+
+.Upload__heading {
+  @include text(0.875rem, 1.375rem);
+  color: $silver;
+}

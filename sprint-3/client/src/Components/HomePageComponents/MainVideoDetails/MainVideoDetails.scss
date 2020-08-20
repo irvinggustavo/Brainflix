@@ -1,0 +1,58 @@
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
+
+.MainVideo__details {
+  margin: 0rem 1rem 1.5rem;
+
+  @include tablet {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.heading {
+  @include text(1.5rem, 2rem);
+  font-family: "AvenirBold";
+  margin: 0;
+
+  @include tablet {
+    @include text(2.25rem, 2.75rem);
+  }
+
+  @media screen and (min-width: 20.0625rem) and (max-width: 47.9375rem) {
+    @include text(1.5rem, 2rem);
+  }
+}
+
+.wtf {
+  @media screen and (min-width: 31.25rem) and (max-width: 47.9375rem) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid $mercury;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.divider {
+  border-bottom: 0.0625rem solid $mercury;
+
+  @include tablet {
+    border-bottom: 0;
+    // align-self: flex-end;
+    // transform: translateY(-3.6875rem)
+  }
+  @media screen and (min-width: 25rem) and (max-width: 47.9375rem) {
+    width: 100%;
+  }
+}
+
+.heading__inner {
+  width: 18rem;
+  display: flex;
+}

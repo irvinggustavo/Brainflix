@@ -1,0 +1,19 @@
+@import '../../../Global/_mixin.scss';
+@import '../../../Global/_variables.scss';
+
+.logo {
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    @include tablet {
+      align-self: center;
+      width: 7.75rem;
+      margin-right: 10.5625rem;
+    }
+    @media screen and (min-width: 550px) and (max-width: 765px) {
+      margin-right: 0rem;
+    }
+  }

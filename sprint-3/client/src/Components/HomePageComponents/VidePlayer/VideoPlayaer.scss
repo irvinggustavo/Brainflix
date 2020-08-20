@@ -1,0 +1,8 @@
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
+
+.videoPlayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

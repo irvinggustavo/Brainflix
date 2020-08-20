@@ -1,0 +1,41 @@
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10.5625rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+
+  @include tablet {
+    flex-direction: row;
+    height: 5rem;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  @include desk {
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 550px) and (max-width: 765px) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.header--inner {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.Btn--noline {
+  text-decoration: none;
+}
+
+.btn__box {
+  display: flex;
+}
