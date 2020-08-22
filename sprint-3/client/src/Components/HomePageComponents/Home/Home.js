@@ -8,8 +8,8 @@ import NextVideo from "../NextVideo/NextVideo";
 import "./Home.scss";
 import MainVideoDetails from "../MainVideoDetails/MainVideoDetails.js";
 
-const key = "?api_key=e7b81747-1e15-40fc-b6a2-8fdd8320ceb0";
-const url = "https://project-2-api.herokuapp.com/";
+// const key = "?api_key=e7b81747-1e15-40fc-b6a2-8fdd8320ceb0";
+const url = "http://localhost:8080/";
 
 class Home extends React.Component {
   state = {
@@ -22,11 +22,11 @@ class Home extends React.Component {
       match: { params },
     } = this.props;
 
-    axios.get(`${url}videos/1af0jruup5gu/${key}`).then((res) => {
+    axios.get(`${url}videos/1af0jruup5gu`).then((res) => {
       console.log(res.data);
       let mainV = res.data;
 
-      axios.get(`${url}videos/${key}`).then((res) => {
+      axios.get(`${url}videos`).then((res) => {
         console.log(res.data)
         this.setState({
           mainVideo: mainV,
@@ -39,7 +39,7 @@ class Home extends React.Component {
   componentDidUpdate(prevprops) {
     if (prevprops.match.params.videoId !== this.props.match.params.videoId) {
       axios
-        .get(`${url}videos/${this.props.match.params.videoId}/${key}`)
+        .get(`${url}videos/${this.props.match.params.videoId}`)
         .then((res) => {
           this.setState({ mainVideo: res.data });
         });
