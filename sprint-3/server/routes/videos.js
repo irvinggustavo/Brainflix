@@ -16,21 +16,26 @@ router.get("/videos", (req, res) => {
 });
 
 router.post("/videos", (req, res) => {
-  if (!req.title || !req.description) {
-    return res
-      .status(400)
-      .json({ message: "pls add a title & description" });
-  }
+  // if (!req.title || !req.description) {
+  //   return res
+  //     .status(400)
+  //     .json({ message: "pls add a title & description" });
+  // }
+const {title, description} = req.body
 
-  const newVideo = {
-    ...req.body,
-    id: uuidv4(),
-    image: "../../client/src/assets/Images/Upload-video-preview.jpg",
-    timestamp: new Date().toLocaleTimeString(),
-  };
-  videosData.push(newVideo);
+const newVideo =  {
+  title,
+  description,
+  channel: "unknown",
+  id: uuidv4(),
+  image : '../../../assets/Images/Upload-video-preview.jpg'
+}
 
-  res.json(newVideo).status(200);
+videosData.push(newVideo);
+
+res.status(200).json(newVideo)
+ 
+ 
 });
 
 router.get("/videos/:id", (req, res) => {

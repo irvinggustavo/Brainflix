@@ -3,8 +3,8 @@ import "./Btn.scss";
 
 const Btn = (props) => {
   return (
-    <div className={props.className}>
-      <img src={props.url} alt={props.description} type="submit" />
+    <div className={props.className} type= "submit">
+      <img src={props.url} alt={props.description}  />
       <p>{props.text}</p>
     </div>
   );

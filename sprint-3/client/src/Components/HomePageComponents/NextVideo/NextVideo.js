@@ -22,7 +22,7 @@ const NextVideo = (props) => {
                       key={uuid()}
                       src={item.image}
                       className="sideImg"
-                      alt="description"
+                      alt={item.title}
                     />
                   </div>
                 </Link>

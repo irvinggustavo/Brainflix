@@ -5,6 +5,9 @@
   height: 32px;
   width: 48.75%;
   background-color: $nav-bg-fill;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: row;
 
   @include tablet {
     width: 67.57%;
@@ -13,4 +16,14 @@
   @include desk {
     width: 46.9375rem;
   }
+
+  &::after{
+    content: '';
+    width: 48.75%;
+    border-bottom: solid 4px black;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+
 }
