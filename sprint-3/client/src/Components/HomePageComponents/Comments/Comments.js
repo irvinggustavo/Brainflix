@@ -1,7 +1,6 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
 
-// import Comment from "../Comment/comment.js";
 import "./Comments.scss";
 
 const Comments = (props) => {

@@ -1,5 +1,4 @@
 import React from "react";
-
 import viewIcon from "../../../assets/Icons/SVG/Icon-views.svg";
 
 class Views extends React.Component {

@@ -2,9 +2,8 @@
 @import "../../../Global/_variables.scss";
 
 .mainVideo {
-  width: 100%;
-  width: 80;
   height: auto;
+  width: 80%;
 
   @include tablet {
     height: 25rem;
@@ -12,6 +11,9 @@
 
   @include desk {
     height: 33.75rem;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
   }
 }
 

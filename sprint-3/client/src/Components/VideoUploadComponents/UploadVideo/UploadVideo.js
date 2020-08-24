@@ -8,7 +8,6 @@ import previesVideo from "../../../assets/Images/Upload-video-preview.jpg";
 // import axios from "axios";
 
 class UploadVideo extends React.Component {
-
   render() {
     return (
       <article className="UploadVideo">
@@ -16,7 +15,7 @@ class UploadVideo extends React.Component {
         <section className="UploadVideo__conatiner">
           <Thumbnail previesVideo={previesVideo} className="Thumbnail" />
 
-          <FormUpload summitHandler = {this.summitData}/>
+          <FormUpload summitHandler={this.summitData} />
         </section>
       </article>
     );

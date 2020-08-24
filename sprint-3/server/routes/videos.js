@@ -16,36 +16,40 @@ router.get("/videos", (req, res) => {
 });
 
 router.post("/videos", (req, res) => {
-  // if (!req.title || !req.description) {
-  //   return res
-  //     .status(400)
-  //     .json({ message: "pls add a title & description" });
-  // }
-const {title, description} = req.body
+  if (!!req.title || !!req.description) {
+    return res.status(400).json({ message: "pls add a title & description" });
+  }
+  const { title, description, image } = req.body;
 
-const newVideo =  {
-  title,
-  description,
-  channel: "unknown",
-  id: uuidv4(),
-  image : '../../../assets/Images/Upload-video-preview.jpg'
-}
+  const newVideo = {
+    title,
+    description,
+    image,
+    channel: "unknown",
+    id: uuidv4(),
+  };
 
-videosData.push(newVideo);
+  videosData.push(newVideo);
 
-res.status(200).json(newVideo)
- 
- 
+  res.status(200).json(newVideo);
 });
 
 router.get("/videos/:id", (req, res) => {
-
   const videoId = req.params.id;
   const currentVideo = videosData.find((video) => video.id === videoId);
   currentVideo.comments = commentsData;
   currentVideo.timestamp = new Date().toLocaleTimeString();
 
   res.status(200).json(currentVideo);
+});
+
+// it works on postman but i couldn't make the link between the fron end and the back end
+router.put("/videos/:id/likes", (req, res) => {
+  const videoId = req.params.id;
+  const currentVideo = videosData.find((video) => video.id === videoId);
+  currentVideo.likes = currentVideo.likes + 1;
+
+  res.send("updated");
 });
 
 module.exports = router;

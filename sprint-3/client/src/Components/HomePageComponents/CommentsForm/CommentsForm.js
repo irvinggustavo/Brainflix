@@ -7,7 +7,6 @@ class CommentsForm extends React.Component {
   render() {
     return (
       <section className="comments_input">
-        {/* <div className= "fake_avatar"> </div> */}
         <Avatar className="avatar" />
         <div>
           <form className="form">

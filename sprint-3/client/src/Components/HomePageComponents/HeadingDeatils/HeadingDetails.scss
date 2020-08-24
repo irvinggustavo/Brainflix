@@ -1,29 +1,29 @@
-@import '../../../Global/_mixin.scss';
-@import '../../../Global/_variables.scss';
+@import "../../../Global/_mixin.scss";
+@import "../../../Global/_variables.scss";
 
 .channel {
-    margin-right: 0.5rem;
-  
-    @include desk {
-      @include text(1.5rem, 2rem);
-    }
-  }
+  margin-right: 0.5rem;
 
-  .silver {
-    color: $silver;
-  }  
-
-  .subHeading {
-    @include text(0.875rem, 1.375rem);
-    font-family: "AvenirDemi";
-  
-    @include tablet {
-      @include text(1rem, 1.5rem);
-    }
+  @include desk {
+    @include text(1.5rem, 2rem);
   }
+}
 
-  .heading__inner {
-    width: 18rem;
-    display: flex;
-    justify-content: space-evenly
+.silver {
+  color: $silver;
+}
+
+.subHeading {
+  @include text(0.875rem, 1.375rem);
+  font-family: "AvenirDemi";
+
+  @include tablet {
+    @include text(1rem, 1.5rem);
   }
+}
+
+.heading__inner {
+  width: 18rem;
+  display: flex;
+  justify-content: space-evenly;
+}

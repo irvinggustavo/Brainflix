@@ -20,7 +20,10 @@ class MainVideoDetails extends React.Component {
           />
           <div className="heading__inner divider">
             <Views views={this.props.details ? this.props.details.views : ""} />
-            <Likes likes={this.props.details ? this.props.details.likes : ""} />
+            <Likes
+              likes={this.props.details ? this.props.details.likes : ""}
+              details={this.props.details}
+            />
           </div>
         </div>
         <VideoDescription

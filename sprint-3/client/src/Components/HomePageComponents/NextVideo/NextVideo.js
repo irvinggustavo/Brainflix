@@ -26,7 +26,6 @@ const NextVideo = (props) => {
                     />
                   </div>
                 </Link>
-
                 <div className=" details_container">
                   <p className="details__title"> {item.title}</p>
                   <p className=" details__channel"> {item.channel}</p>

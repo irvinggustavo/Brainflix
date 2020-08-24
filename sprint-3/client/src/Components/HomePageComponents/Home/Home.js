@@ -8,7 +8,6 @@ import NextVideo from "../NextVideo/NextVideo";
 import "./Home.scss";
 import MainVideoDetails from "../MainVideoDetails/MainVideoDetails.js";
 
-// const key = "?api_key=e7b81747-1e15-40fc-b6a2-8fdd8320ceb0";
 const url = "http://localhost:8080/";
 
 class Home extends React.Component {
@@ -16,18 +15,12 @@ class Home extends React.Component {
     sideVideos: [],
     mainVideo: null,
   };
-  
-  componentDidMount() {
-    const {
-      match: { params },
-    } = this.props;
 
+  componentDidMount() {
     axios.get(`${url}videos/1af0jruup5gu`).then((res) => {
-      console.log(res.data);
       let mainV = res.data;
 
       axios.get(`${url}videos`).then((res) => {
-        console.log(res.data)
         this.setState({
           mainVideo: mainV,
           sideVideos: res.data,
